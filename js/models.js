@@ -16,4 +16,6 @@ function loadDNA(scene) {
   );
 }
 
-export { loadDNA, dnaModel };
+function getDnaModel(){return dnaModel;}
+
+export { loadDNA, getDnaModel, dnaModel };

@@ -44,7 +44,12 @@ function handleClick() {
   }
 }
 
-window.addEventListener('pointermove', updatePointer);
-window.addEventListener('click', handleClick);
+export function enableControls(){
+  window.addEventListener('pointermove', updatePointer);
+  window.addEventListener('click', handleClick);
+}
 
-export { handleClick };
+export function disableControls(){
+  window.removeEventListener('pointermove', updatePointer);
+  window.removeEventListener('click', handleClick);
+}
