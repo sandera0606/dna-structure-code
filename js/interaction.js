@@ -66,6 +66,7 @@ function showHomepageUI() {
   homeIndex = 0;
   setHomeStatus(true);
   zoomOut();
+  outlinePass.selectedObjects = [];
   document.getElementById('textPart').innerHTML = homepage[homeIndex];
   document.getElementById('prevBtn').classList.remove('hidden');
   document.getElementById('prevBtn').disabled = true;
