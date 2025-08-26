@@ -1,7 +1,7 @@
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { THREE, scene, camera, outlinePass } from './scene.js';
 import { dnaModel } from './models.js';
-import { extractKey, infos, images } from './util.js';
+import { extractKey, infos, images, defaultInfo } from './util.js';
 
 // controls
 export function setupControls(camera, renderer) {
@@ -31,7 +31,11 @@ function findTopLevelMesh(mesh) {
 function handleClick() {
   raycaster.setFromCamera(pointer, camera);
   const intersects = raycaster.intersectObjects(scene.children, true);
-  if (intersects.length === 0) return;
+  if (intersects.length === 0){
+    document.getElementById('infoText').innerHTML = defaultInfo;
+    document.getElementById('infoImage').classList.add('hidden');
+    outlinePass.selectedObjects = [];
+  }
 
   let obj = intersects[0].object;
   if (dnaModel && (dnaModel.children.includes(obj) || obj.parent)) {
@@ -39,6 +43,7 @@ function handleClick() {
     const partName = obj.name;
     const key = extractKey(partName);
     document.getElementById('infoText').innerHTML = infos.get(key);
+    document.getElementById('infoImage').classList.remove('hidden');
     document.getElementById('infoImage').innerHTML = "<img src=" + images.get(key) + ">";
     outlinePass.selectedObjects = [obj];
   }

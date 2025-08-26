@@ -27,6 +27,7 @@ startAnimationLoop({ composer, controls });
 function showHomepageUI() {
   isOnHomePage = true;
   index = 0;
+  zoomOut();
   document.getElementById('textPart').innerHTML = homepage[index];
   document.getElementById('prevBtn').classList.remove('hidden');
   document.getElementById('prevBtn').disabled = true;
@@ -91,7 +92,7 @@ function prevPage(){
 // start exploring
 document.getElementById('startExploringBtn').addEventListener('click', zoomIn);
 // home
-document.getElementById('homeBtn').addEventListener('click', zoomOut);
+document.getElementById('homeBtn').addEventListener('click', showHomepageUI);
 // next/previous buttons
 document.getElementById('prevBtn').addEventListener('click', prevPage);
 document.getElementById('nextBtn').addEventListener('click', nextPage);
