@@ -27,7 +27,7 @@ export function startAnimationLoop({ composer, controls }) {
   animate();
 }
 
-export function smoothZoomOut(camera, targetPosition = { x: 0, y: 0, z: 10 }, duration = 1000) {
+export function smoothZoom(camera, targetPosition = { x: 0, y: 0, z: 10 }, duration = 1000) {
     const start = { ...camera.position };
     const end = targetPosition;
     const startTime = performance.now();

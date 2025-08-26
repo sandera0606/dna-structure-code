@@ -47,4 +47,16 @@ const images = new Map([
     ["phosphate", "./phosphate.png"]
 ])
 
-export {infos, images}
+const homepage = [
+    `<h1>Double Helix</h1>
+    <h2>This is the DNA double helix.</h2>
+    <p>It is made of two strands twisted around each other like a spiral ladder. Each “rung” is a pair of nitrogenous bases, and the “rails” are made of sugar and phosphate groups.</p>`,
+    `<h1>Double Helix</h1>
+    <h2>Directionality (5’ and 3’ Ends)</h2>
+    <p>DNA has direction! Each strand runs in an opposite direction. One goes from 5’ to 3’, and the other from 3’ to 5’. This is important for DNA replication and for interaction with different enzymes. You can spot the 5’ end by finding the phosphate group on the end of a pentose sugar!</p>`,
+    `<h1>Double Helix</h1>
+    <h2>Major and Minor Grooves</h2>
+    <p>As DNA twists, it forms two types of grooves: major and minor. These grooves are spots where proteins can bind to DNA, which is crucial for gene expression.</p>`
+]
+
+export {infos, images, homepage}
