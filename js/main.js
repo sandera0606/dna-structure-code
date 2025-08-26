@@ -4,7 +4,7 @@ import '../css/style.css';
 import { scene, camera, renderer, composer, setBackground } from './scene.js' // scene, camera, renderer, composer setup
 import { getDnaModel, loadDNA } from './models.js';
 import { setupControls, enableControls, disableControls } from './interaction.js';
-import { startAnimationLoop, setHomeStatus } from './animation.js';
+import { startAnimationLoop, setHomeStatus, smoothZoomOut } from './animation.js';
 
 let isOnHomePage = true;
 
@@ -22,13 +22,19 @@ const controls = setupControls(camera, renderer);
 startAnimationLoop({ composer, controls });
 
 function showHomepageUI() {
-    document.getElementById('infoBtn').classList.remove('hidden');
+    document.getElementById('prevBtn').classList.remove('hidden');
+    document.getElementById('nextBtn').classList.remove('hidden');
     document.getElementById('startExploringBtn').classList.remove('hidden');
+    console.log(document.getElementById('infoImage'));
+    document.getElementById('infoImage').classList.add('hidden');
 }
 
 function showExploreUI() {
-    document.getElementById('infoBtn').classList.add('hidden');
+    document.getElementById('prevBtn').classList.add('hidden');
+    document.getElementById('nextBtn').classList.add('hidden');
     document.getElementById('startExploringBtn').classList.add('hidden');
+    console.log(document.getElementById('infoImage'));
+    document.getElementById('infoImage').classList.remove('hidden');
 }
 
 function zoomIn() {
@@ -47,14 +53,11 @@ function zoomOut() {
         isOnHomePage = true;
         showHomepageUI();
     }
+    smoothZoomOut(camera, { x: 0, y: 0, z: 10 }, 1000);
 }
 
 // Attach event listeners
 document.getElementById('startExploringBtn').addEventListener('click', zoomIn);
-document.getElementById('infoBtn').addEventListener('click', () => {
-    // Show your info modal or panel here
-    alert('DNA is the molecule that carries genetic information...');
-});
 document.getElementById('homeBtn').addEventListener('click', zoomOut);
 
 // Initial UI state

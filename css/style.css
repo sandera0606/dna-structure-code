@@ -65,9 +65,14 @@ button {
   margin-right: 8px;
   font-family: 'Courier New', monospace;
   box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  border-radius: 3px;
 }
 
-.hidden{ display: none; }
+button:hover{
+  background-color:#808080;
+}
+
+.hidden{ display: none !important; }
 
 .topbar {
   position: fixed;
@@ -79,7 +84,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 12px;
+  padding: 0 32px 0 12px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
   z-index: 1000;
 }
@@ -88,6 +93,7 @@ button {
 .dropdown {
   position: relative;
   display: inline-block;
+  margin-right: 16px;
 }
 
 /* Hamburger icon */
@@ -102,7 +108,7 @@ button {
 .dropdown-content {
   display: none;
   position: absolute;
-  right: 0;
+  right: 5px;
   top: 100%;
   background: #fff;
   min-width: 160px;
