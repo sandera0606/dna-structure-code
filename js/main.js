@@ -4,7 +4,7 @@ import '../css/style.css';
 import { scene, camera, renderer, composer, setBackground } from './scene.js' // scene, camera, renderer, composer setup
 import { getDnaModel, loadDNA } from './models.js';
 import { setupControls } from './interaction.js';
-import { startAnimationLoop, setHomeStatus, smoothZoom } from './animation.js';
+import { startAnimationLoop } from './animation.js';
 
 document.getElementById('prevBtn')
 

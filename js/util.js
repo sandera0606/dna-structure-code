@@ -59,6 +59,6 @@ const homepage = [
     <p>As DNA twists, it forms two types of grooves: major and minor. These grooves are spots where proteins can bind to DNA, which is crucial for gene expression.</p>`
 ]
 
-const defaultInfo = "Drag around and have fun!"
+const defaultInfo = "Click on something to learn more."
 
 export {infos, images, homepage, defaultInfo}

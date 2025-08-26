@@ -12,6 +12,10 @@ export function setHomeStatus(boolean){
   isOnHomepage = boolean;
 }
 
+export function getHomeStatus(){
+  return isOnHomepage;
+}
+
 export function startAnimationLoop({ composer, controls }) {
   function animate() {
     requestAnimationFrame(animate);

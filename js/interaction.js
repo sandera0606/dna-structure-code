@@ -2,9 +2,8 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { THREE, scene, camera, outlinePass } from './scene.js';
 import { dnaModel } from './models.js';
 import { extractKey, infos, images, defaultInfo, homepage } from './util.js';
-import { setHomeStatus, smoothZoom } from './animation.js';
+import { setHomeStatus, getHomeStatus, smoothZoom } from './animation.js';
 
-let isOnHomePage = true;
 let homeIndex = 0;
 
 // controls
@@ -64,8 +63,8 @@ export function disableControls(){
 }
 
 function showHomepageUI() {
-  isOnHomePage = true;
   homeIndex = 0;
+  setHomeStatus(true);
   zoomOut();
   document.getElementById('textPart').innerHTML = homepage[homeIndex];
   document.getElementById('prevBtn').classList.remove('hidden');
@@ -78,8 +77,8 @@ function showHomepageUI() {
 }
 
 function showExploreUI() {
-  isOnHomePage = false;
   enableControls();
+  setHomeStatus(false);
   document.getElementById('prevBtn').classList.add('hidden');
   document.getElementById('nextBtn').classList.add('hidden');
   document.getElementById('startExploringBtn').classList.add('hidden');
@@ -87,7 +86,7 @@ function showExploreUI() {
 }
 
 function zoomIn() {
-  if (isOnHomePage) {
+  if (getHomeStatus()) {
       setHomeStatus(false);
       enableControls();
       showExploreUI();
@@ -96,7 +95,7 @@ function zoomIn() {
 }
 
 function zoomOut() {
-  if (!isOnHomePage) {
+  if (!getHomeStatus()) {
       setHomeStatus(true);
       disableControls();
       showHomepageUI();

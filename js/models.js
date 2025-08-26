@@ -8,7 +8,7 @@ function loadDNA(scene) {
     './helix.glb',
     (gltf) => {
       dnaModel = gltf.scene;
-      dnaModel.position.y -= 2;
+      dnaModel.position.y -= 1.25;
       scene.add(dnaModel);
     },
     undefined,
