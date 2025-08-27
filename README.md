@@ -16,10 +16,10 @@ I got into 3D modeling around 2020, but I’ve only really messed around with it
 
 Some of my other interests include: bouldering, playing electric bass, origami, going to the gym (but I always skip leg day…)
 ## Research and Sources
-How do I know this tool will be effective? I don’t. But many research-driven studies suggest that it would be. And I’m really hoping that it is.
-A study from the team at ExploreLearning (the people who developed Gizmos) found that students who use interactive visual tools like 3D models score 39 percentile points higher on average than those who don’t (find the study [here](https://gizmos.explorelearning.com/user_area/content_media/raw/why-gizmos-work-research-paper.pdf)).
-There’s a lot of research showing that students have trouble translating 2D diagrams into 3D mental images (Find two studies [here](https://core.ac.uk/download/639103617.pdf) and [here](https://pubmed.ncbi.nlm.nih.gov/30897273/)). One recent study found that relying only on 2D diagrams leads to misconceptions and confusion. This tool can get rid of those misunderstandings; instead of asking students to imagine how the DNA double helix twists, they can see it right in front of them and explore it hands-on. 
-It looks cool, which matters! Students care about visuals. One study (from Frontiers in Psychology) shows that people subconsciously value things more when they look good (find it [here](https://doi.org/10.3389/fpsyg.2021.670800)!).
+How do I know this tool will be effective? I don’t, not really. Maybe it won't be. But I did some research which suggests that it'll be helpful, and I'm hoping it will be!
+- A study from the team at ExploreLearning (the people who developed Gizmos) found that students who use interactive visual tools like 3D models score 39 percentile points higher on average than those who don’t (find the study [here](https://gizmos.explorelearning.com/user_area/content_media/raw/why-gizmos-work-research-paper.pdf)).
+- Students have trouble translating 2D diagrams into 3D mental images (Find two studies [here](https://core.ac.uk/download/639103617.pdf) and [here](https://pubmed.ncbi.nlm.nih.gov/30897273/)). One recent study found that relying only on 2D diagrams leads to misconceptions and confusion. This tool can get rid of those misunderstandings; instead of asking students to imagine how the DNA double helix twists, they can see it right in front of them and explore it hands-on. 
+- Students care about visuals. One study (from Frontiers in Psychology) shows that people subconsciously value things more when they look good (find it [here](https://doi.org/10.3389/fpsyg.2021.670800)!). I hope this website looks cool enough to subconsciously be valued highly.
 
 
 The facts used in the website can be found in the following resources:
