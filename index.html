@@ -5,22 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DNA Explorer</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
   </head>
   <body>
+    <!-- Top bar -->
     <div class="topbar">
       <!-- Home Button -->
-      <button id="homeBtn">🏠</button>
+      <button id="homeBtn" class="icon-btn" aria-label="Home">
+        <i class="fa-regular fa-house"></i>
+      </button>
 
       <!-- Dropdown Menu -->
       <div class="dropdown" id="menuDropdown">
         <button class="dropbtn">☰</button>
         <div class="dropdown-content">
-          <a href="#">Item 1</a>
-          <a href="#">Item 2</a>
-          <a href="#">Item 3</a>
+          <a href="#" id="aboutMe">About Me</a>
+          <a href="#" id="motive">Motive</a>
+          <a href="#" id="resources">More Resources</a>
+          <a href="#" id="citations">Citations</a>
+          <a href="https://github.com/sandera0606/dna-structure-code" target="_blank">Github Repo</a>
         </div>
       </div>
     </div>
+
+    <!-- Overlay Box -->
+    <div id="overlay" class="overlay hidden">
+      <div class="overlay-content">
+        <span id="overlayClose" class="overlay-close">&times;</span>
+        <div id="overlayText"></div>
+      </div>
+    </div>
+
+    <!-- Info Panel -->
     <div id="infoPanel">
       <div id="infoImage">
       </div>

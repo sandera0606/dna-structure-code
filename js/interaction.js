@@ -1,7 +1,7 @@
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { THREE, scene, camera, outlinePass } from './scene.js';
 import { dnaModel } from './models.js';
-import { extractKey, infos, images, defaultInfo, homepage } from './util.js';
+import { extractKey, infos, images, defaultInfo, homepage, menuMap } from './util.js';
 import { setHomeStatus, getHomeStatus, smoothZoom } from './animation.js';
 
 let homeIndex = 0;
@@ -152,5 +152,51 @@ dropdown.querySelector('.dropbtn').addEventListener('click', () => {
 window.addEventListener('click', (e) => {
   if (!dropdown.contains(e.target)) {
     dropdown.classList.remove('show');
+  }
+});
+
+
+const overlay = document.getElementById("overlay");
+const overlayText = document.getElementById("overlayText");
+const overlayClose = document.getElementById("overlayClose");
+
+document.getElementById("aboutMe").addEventListener("click", (e) => {
+  e.preventDefault();
+  overlayText.innerHTML = menuMap.get("aboutMe");
+  overlay.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+});
+
+document.getElementById("motive").addEventListener("click", (e) => {
+  e.preventDefault();
+  overlayText.innerHTML = menuMap.get("motive");
+  overlay.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+});
+
+document.getElementById("resources").addEventListener("click", (e) => {
+  e.preventDefault();
+  overlayText.innerHTML = menuMap.get("resources");
+  overlay.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+});
+
+document.getElementById("citations").addEventListener("click", (e) => {
+  e.preventDefault();
+  overlayText.innerHTML = menuMap.get("citations");
+  overlay.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+});
+
+// Close overlay
+overlayClose.addEventListener("click", () => {
+  overlay.classList.add("hidden");
+  document.body.style.overflow = "auto";
+});
+
+overlay.addEventListener("click", (e) => {
+  if (e.target === overlay) {
+    overlay.classList.add("hidden");
+    document.body.style.overflow = "auto";
   }
 });

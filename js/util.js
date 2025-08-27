@@ -61,4 +61,48 @@ const homepage = [
 
 const defaultInfo = "Click on something to learn more."
 
-export {infos, images, homepage, defaultInfo}
+const menuMap = new Map([
+    ["aboutMe",
+        `<h2>About Me</h2>
+        <p> Hi, I'm Sandra! I'm currently a 2nd year CS student at UWaterloo (as of 2025), and this is my first time building a website EVER! I love biology (isn't it so cool how every living thing is made up of so many little things that just somehow... work?) and 3D modeling, and this was a fun project that helped me bring my interests together. Some irrelevant stuff about me: I love to rock climb and fold origami! </p>
+        <p>Find me here:</p>
+        <ul>
+        <li><a href="https://www.linkedin.com/in/shuang0616/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/sandera0606" target="_blank">GitHub</a></li>
+        <li><a href="mailto:shuang2322@gmail.com">Email</a></li>
+        </ul>`],
+    ["motive",
+        `<h2>Motive</h2>
+        <h3>Why I made this Tool</h3>
+        <p>When I first learned about DNA, I remember being really confused. Everything was taught to me using 2D diagrams, and then my teacher suddenly pulled up a 3D youtube video about DNA replication which didn’t resemble the 2D diagrams at all! I found the diagrams which show the molecular structure of DNA super difficult to understand and also overwhelming. Although I could understand the basics (DNA is made of base pairs, it carries genetic information, there are three components in a nucleotide), I couldn’t visualize the 3D form of DNA in my head (the only image I could conjure was a helical shape with ladder rings, which was <b>not</b> a picture that had the molecular structure in mind). I didn’t get how all the pieces of DNA worked together in 3D space, and how all those pieces somehow became a ribbon-like helical shape.</p>
+        <h3>The Problem with Flat Diagrams</h3>
+        <p>Most students are introduced to DNA through a series of 2D diagrams. These often break down the molecule into its parts (phosphate, sugar, base pairs) and show them separately. Sometimes they’re simplified for clarity, sometimes they’re drawn at odd angles to fit a page. While these diagrams can be useful, they require students to do a lot of mental work to imagine how everything fits together in real space. However, it's so important to understand DNA's structure, since its form is so specific to its function.</p>
+        <h3>Building a Better Way to See DNA</h3>
+        <p>I built this website because I wanted to bridge the gap between the 2D diagrams that we see and the 3D ladder-like structure of DNA that we know exists. I wanted to take those same concepts that students already learn (base pairing, backbone structure, helical shape), and present them in 3D, interactively, allowing students to explore DNA’s structure on their own.</p>
+        <p>When you click on different parts of the molecules, short explanations pop up, helping you connect the visual with the concept. The blurbs are intended to be clear and straightforward.</p>
+        <p>Thanks for taking the time to explore this project! I hope you find it useful, fun to explore, and that you’ve learned something new :-)</p>`],
+    ["resources",
+        `<h2>More Resources</h2>
+        <p>Hello! Here are some cool resources that you can check out to learn more! Teachers, you can consider showing these in your classrooms :-)</p>
+        <ul>
+        <li><a href="https://proteopedia.org/wiki/index.php/DNA" target="_blank">DNA on Proteopedia</a> (another cool 3D representation of DNA)</li> 
+        <li><a href="https://www.youtube.com/watch?v=JQByjprj_mA&t=54s" target="_blank">Amoeba Sisters: DNA vs RNA</a></li>
+        <li><a href="https://www.youtube.com/watch?v=SeOrvA9ikW8&pp=ygUNbnVjbGVpYyBhY2lkcw%3D%3D" target="_blank">Visualizing Nucleic Acids</a></li>
+        </ul>`],
+    ["citations",
+        `<h2>Citations</h2>
+        <p>All images on this site were made by me. All information on this site was taken from the textbooks in the following citations.</p>
+        
+        <h3>Works Cited</h3>
+        <ul>
+        <li>Goldberg, M., & Fischer, J. (2023). <i>Genetics: From Genes to Genomes</i> (8th edition). McGraw Hill.</li>
+        <li>Huang, Sandra. "AT Pair Molecule." <i>3D Structure of DNA</i>, July 2025, https://sandera0606.github.io/dna-structure.</li>
+        <li>Huang, Sandra. "CG Pair Molecule." <i>3D Structure of DNA</i>, July 2025, https://sandera0606.github.io/dna-structure.</li>
+        <li>Huang, Sandra. "Deoxyribose Molecule." <i>3D Structure of DNA</i>, July 2025, https://sandera0606.github.io/dna-structure.</li>
+        <li>Huang, Sandra. "DNA Helix 3D Molecule." <i>3D Structure of DNA</i>, July 2025, https://sandera0606.github.io/dna-structure.</li>
+        <li>Huang, Sandra. "Phosphate Molecule." <i>3D Structure of DNA</i>, July 2025, https://sandera0606.github.io/dna-structure.</li>
+        <li>Morris, James, et al. <i>Biology: How Life Works</i>. 5th ed., Macmillan Learning, 2023.</li>
+        </ul>`]
+])
+
+export {infos, images, homepage, defaultInfo, menuMap}
